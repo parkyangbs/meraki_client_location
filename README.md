@@ -16,4 +16,4 @@ Show Meraki wifi clients in Google maps
    $python3 run-location-backend-server.py
 4) Open Web Browser and enter http://<web server IP>:8000
 
-! Architecture diagram (https://github.com/)
+! Architecture diagram (https://github.com/parkyangbs/meraki_client_location/blob/main/meraki_client_location.jpg)
