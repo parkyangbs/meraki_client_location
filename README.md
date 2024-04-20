@@ -17,6 +17,7 @@ Show Meraki wifi clients in Google maps
    
       2.2) Update Meraki localtion API key
 4) Deployment
+   
       3.1) Run receiving server of Meraki location scan data
    
             python3 cmxreceiver-mongodb.py -v 'key' -s 'secret'
