@@ -15,7 +15,8 @@ Using Meraki location scan API to push wifi client location data to an external 
 2) Configuration
 
       2.1) Update Google Map API Key
-   
+         git clone https://github.com/parkyangbs/meraki_client_location.git
+
       2.2) Update Meraki localtion API key
 4) Deployment
    
