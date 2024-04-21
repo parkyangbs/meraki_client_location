@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients Map</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-bottom: 20px; /* Add some space between map and table */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+  <!  <div id="map"></div>
 
+   <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCl7FMTCsgS6jKgmYobmpw47RKtOZ3MyEQ&q=40.02,-75.458" height="400" width="1360" name="iframe_a" title="iframe map"></iframe>
+
+
+    <table>
+        <tr>
+            <th>ClientMac</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Seen Time</th>
+            <th>Manufacturer</th>
+            <th>Comment</th>
+            <th>Map Link</th> <!-- Add new column -->
+        </tr>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.clientMac }}</td>
+                <td>{{ item.lat }}</td>
+                <td>{{ item.lng }}</td>
+                <td>{{ item.seenTime }}</td>
+                <td>{{ item.manufacturer }}</td>
+                <td>{{ item.comment }}</td>
+                <td><a href="{{ item.map_url }}" target="iframe_a">Open in Google Maps</a></td> <!-- Add new column -->
+            </tr>
+        {% endfor %}
+    </table>
+
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: {lat:40.7647697512587, lng:-73.893320113420} // Center map on Queen
+            });
+
+            // Define an array to hold all client locations
+            var clientLocations = [
+                {% for item in data %}
+                    {lat: {{ item.lat }}, lng: {{ item.lng }}},
+                {% endfor %}
+            ];
+
+            // Add markers for each client location
+            for (var i = 0; i < clientLocations.length; i++) {
+                var marker = new google.maps.Marker({
+                    position: clientLocations[i],
+                    map: map,
+                    title: 'Client ' + (i+1)  // Set marker title
+                });
+            }
+        }
+    </script>
+
+  <!  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=Google_maps_api_key&callback=initMap">
+  <!  </script>
+
+</body>
+</html>
