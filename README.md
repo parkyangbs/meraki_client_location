@@ -34,7 +34,7 @@ Using Meraki location scan API to push wifi client location data to an external 
 4) Open Web Browser and enter http://35.226.133.19:8000
    
 # Diagram
-![Alt diagram] https://github.com/parkyangbs/meraki_client_location/blob/main/Meraki_Client_Location.jpg
+![Alt diagram] (https://github.com/parkyangbs/meraki_client_location/blob/main/Meraki_Client_Location.jpg)
 
 # References
 https://github.com/dexterlabora/cmxreceiver-python
