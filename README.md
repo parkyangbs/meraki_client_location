@@ -1,13 +1,14 @@
-# meraki_client_location
-Show Meraki wifi clients in Google maps
+# Display Wifi Location on Google maps
+Using Meraki location scan API to push wifi client location data to an external DB and display the location on Google maps
 
 # Environment
 - Python3
-- MongoDB
+- MongoDB7.0.5
 - ngrok
 - Meraki
 - Debian 11
 - Google Maps API
+- flask
 
 # Installation Instruction
 1) Download from github
@@ -32,3 +33,7 @@ Show Meraki wifi clients in Google maps
    
 # Diagram
 https://github.com/parkyangbs/meraki_client_location/blob/main/Meraki_Client_Location.jpg
+
+# References
+https://github.com/dexterlabora/cmxreceiver-python
+
