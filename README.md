@@ -12,14 +12,14 @@ Using Meraki location scan API to push wifi client location data to an external 
 
 # Installation Instruction
 1) Download from github
+  
+      git clone https://github.com/parkyangbs/meraki_client_location.git
 2) Configuration
 
       2.1) Update Google Map API Key
-   
-         git clone https://github.com/parkyangbs/meraki_client_location.git
 
       2.2) Update Meraki localtion API key
-4) Deployment
+3) Deployment
    
       3.1) Run receiving server of Meraki location scan data
    
@@ -31,7 +31,7 @@ Using Meraki location scan API to push wifi client location data to an external 
 
            python3 run-location-backend-server.py
    
-5) Open Web Browser and enter http://35.226.133.19:8000
+4) Open Web Browser and enter http://35.226.133.19:8000
    
 # Diagram
 https://github.com/parkyangbs/meraki_client_location/blob/main/Meraki_Client_Location.jpg
